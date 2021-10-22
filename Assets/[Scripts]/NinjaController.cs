@@ -15,6 +15,7 @@ public class NinjaController : MonoBehaviour
     public float horizontalSpeed;
     public float horizontalBoundary;
 
+    //ref to player
     public PlayerController playerref;
     public GameObject ninjaPrefab;
 
@@ -26,7 +27,7 @@ public class NinjaController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //set lane values
         laneOne = new Vector3(12f, -1.5f, 0);
         laneTwo = new Vector3(12f, -2.84f, 0);
         laneThree = new Vector3(12f, -4.44f, 0);
@@ -34,8 +35,6 @@ public class NinjaController : MonoBehaviour
 
     void Update()
     {
-        Random.InitState(System.DateTime.Now.Millisecond);
-        //transform.position.y = playerref.GetYPos();
         _Move();
         _CheckBounds();
     }
@@ -44,10 +43,12 @@ public class NinjaController : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
 
+        //set random x value
         laneOne = new Vector3(Random.Range(12, 16), -1.5f, 0);
         laneTwo = new Vector3(Random.Range(12, 16), -2.84f, 0);
         laneThree = new Vector3(Random.Range(12, 16), -4.44f, 0);
 
+        //decide which lane to spawn
         int rand = Random.Range(1, 15);
         if (rand <= 5)
         {
@@ -67,10 +68,12 @@ public class NinjaController : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
 
+        //set random x value
         laneOne = new Vector3(Random.Range(15, 19), -1.5f, 0);
         laneTwo = new Vector3(Random.Range(15, 19), -2.84f, 0);
         laneThree = new Vector3(Random.Range(15, 19), -4.44f, 0);
 
+        //decide which lane to spawn
         int rand = Random.Range(1, 15);
         if (rand <= 5)
         {
@@ -86,22 +89,22 @@ public class NinjaController : MonoBehaviour
         }
     }
 
-    //scroll background to the left
+    //move to the left
     private void _Move()
     {
         transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
     }
 
-    //check if background is past the screen
+    //check if ninja is past the screen
     private void _CheckBounds()
     {
-        // if the background is lower than the bottom of the screen then reset
         if (transform.position.x <= -horizontalBoundary)
         {
             _Reset();
         }
     }
 
+    //return ninja x position
     public float GetXPos()
     {
         return transform.position.x;
@@ -109,6 +112,7 @@ public class NinjaController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //check if colliding
         if (collision.tag == "PlayerProjectile")
         {
             _ResetDeath();

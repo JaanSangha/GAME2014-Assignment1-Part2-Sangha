@@ -14,7 +14,7 @@ public class DaggerBehaviour : MonoBehaviour
     public float horizontalSpeed;
     public float horizontalBoundary;
 
-   // GameObject ninja;
+   //ref to ninja
     public NinjaController ninref;
 
     void Update()
@@ -22,20 +22,19 @@ public class DaggerBehaviour : MonoBehaviour
         _Move();
         _CheckBounds();
     }
-    //reset background to starting scrolling position
+    //reset to ninja position
     private void _Reset()
     {
         transform.position = ninref.transform.position;
     }
-    //scroll background to the left
+    //move left
     private void _Move()
     {
         transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
     }
-    //check if background is past the screen
+    //check if dagger is past the screen
     private void _CheckBounds()
     {
-        // if the background is lower than the bottom of the screen then reset
         if (transform.position.x <= -horizontalBoundary)
         {
             _Reset();
@@ -44,6 +43,7 @@ public class DaggerBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //reset if destroyed
         if (collision.tag == "PlayerProjectile")
         {
             _Reset();

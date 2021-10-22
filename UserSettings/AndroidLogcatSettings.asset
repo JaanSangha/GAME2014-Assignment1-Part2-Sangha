@@ -1,37 +1,13 @@
 {
     "m_SelectedDeviceId": "emulator-5554",
     "m_SelectedPackage": {
-        "deviceId": "emulator-5554",
-        "name": "ca.georgebrown.GAME2014Lab2Sangha",
-        "processId": 3319,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.georgebrown.GAME2014Lab1Sangha",
-            "processId": 2980,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.georgebrown.GAME2014Lab2Sangha",
-            "processId": 3636,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "com.ldmnq.launcher3",
-            "processId": 1978,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.georgebrown.GAME2014Lab2Sangha",
-            "processId": 4240,
-            "exited": true
-        },
         {
             "deviceId": "emulator-5554",
             "name": "ca.georgebrown.GAME2014Lab2Sangha",
@@ -42,12 +18,30 @@
             "deviceId": "emulator-5554",
             "name": "com.ldmnq.launcher3",
             "processId": 1930,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "ca.georgebrown.GAME2014Lab2Sangha",
             "processId": 3319,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.georgebrown.GAME2014Lab2Sangha",
+            "processId": 5461,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.georgebrown.GAME2014Lab2Sangha",
+            "processId": 3146,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.ldmnq.launcher3",
+            "processId": 1908,
             "exited": false
         }
     ],

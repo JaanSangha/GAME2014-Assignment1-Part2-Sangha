@@ -14,6 +14,7 @@ public class PlaneController : MonoBehaviour
     public float horizontalSpeed;
     public float horizontalBoundary;
 
+    //player reference
     public PlayerController playerref;
 
     AudioSource dropBomb;
@@ -33,20 +34,19 @@ public class PlaneController : MonoBehaviour
     {
         dropBomb.Play();
     }
-    //reset background to starting scrolling position
+    //reset plane to starting scrolling position
     private void _Reset()
     {
         transform.position = new Vector3(horizontalBoundary, 2.5f);
     }
-    //scroll background to the left
+    //scroll plane to the left
     private void _Move()
     {
         transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
     }
-    //check if background is past the screen
+    //check if plane is past the screen
     private void _CheckBounds()
     {
-        // if the background is lower than the bottom of the screen then reset
         if (transform.position.x <= -horizontalBoundary)
         {
             _Reset();

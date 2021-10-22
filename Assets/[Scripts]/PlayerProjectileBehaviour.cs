@@ -21,14 +21,14 @@ public class PlayerProjectileBehaviour : MonoBehaviour
         _Move();
         _CheckBounds();
     }
-
+    //move projectile right
     private void _Move()
     {
         transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
     }
     private void _CheckBounds()
     {
-
+        //destroy object if off screen
         if (transform.position.x >= horizontalBoundary)
         {
             Destroy(this.gameObject);

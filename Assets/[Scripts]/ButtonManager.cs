@@ -1,5 +1,9 @@
-//PauseButtonManager.cs
-//Jaan Sangha 101264598
+/*
+ButtonManager.cs
+Jaan Sangha - 101264598
+Last Modified: Oct 21, 2021
+Description: this script controls the  behaviour of menu buttons
+*/
 
 using System.Collections;
 using System.Collections.Generic;

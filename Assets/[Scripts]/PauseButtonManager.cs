@@ -1,6 +1,9 @@
-//PauseButtonManager.cs
-//Jaan Sangha 101264598
-
+/*
+PauseButtonManager.cs
+Jaan Sangha - 101264598
+Last Modified: Oct 21, 2021
+Description: this script controls the behaviour of the buttons
+*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,6 +54,7 @@ public class PauseButtonManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
+    //when lives run out
     public void OngameOver()
     {
         Time.timeScale = 0;
@@ -60,6 +64,7 @@ public class PauseButtonManager : MonoBehaviour
         BlurScreen.SetActive(true);
     }
 
+    //when score is reached
     public void OnGameWon()
     {
         Time.timeScale = 0;

@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class BombBehaviour : MonoBehaviour
 {
-
+    //ref to plane class
     public PlaneController planeref;
 
     public float horizontalSpeed;
@@ -28,6 +28,7 @@ public class BombBehaviour : MonoBehaviour
 
     private void Start()
     {
+        //set lane y values
         laneOne = -1.4f;
         laneTwo = -2.9f;
         laneThree = -4.2f;
@@ -35,6 +36,7 @@ public class BombBehaviour : MonoBehaviour
     }
     void Update()
     {
+        //check if on floor
         if (transform.position.y <= destinationLane)
         {
             isGrounded = true;
@@ -43,12 +45,14 @@ public class BombBehaviour : MonoBehaviour
         {
             isGrounded = false;
         }
+
         _Move();
         _CheckBounds();
     }
 
     private void _Move()
     {
+        //move down and then left when on floor
         if (isGrounded)
         {
             transform.position -= new Vector3(horizontalSpeed, 0.0f) * Time.deltaTime;
@@ -63,6 +67,7 @@ public class BombBehaviour : MonoBehaviour
     {
         Random.InitState(System.DateTime.Now.Millisecond);
 
+        //choose which lane randomly
         int rand = Random.Range(1, 15);
         if (rand <= 5)
         {
@@ -80,6 +85,7 @@ public class BombBehaviour : MonoBehaviour
 
     private void _Reset()
     {
+        //reset to plane position
         transform.position = planeref.transform.position;
         planeref.PlaySound();
     }

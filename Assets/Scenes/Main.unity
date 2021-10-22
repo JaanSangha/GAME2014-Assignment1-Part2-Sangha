@@ -2652,30 +2652,6 @@ PrefabInstance:
       propertyPath: playerref
       value: 
       objectReference: {fileID: 1260925826}
-    - target: {fileID: -5560233633321969310, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
-      propertyPath: horizontalSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: -1946745257741663286, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
-      propertyPath: m_Size.x
-      value: 3.9361606
-      objectReference: {fileID: 0}
-    - target: {fileID: -1946745257741663286, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
-      propertyPath: m_Size.y
-      value: 4.6761847
-      objectReference: {fileID: 0}
-    - target: {fileID: -1946745257741663286, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.4107237
-      objectReference: {fileID: 0}
-    - target: {fileID: -1946745257741663286, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.13690758
-      objectReference: {fileID: 0}
-    - target: {fileID: -1946745257741663286, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3286316581123147353, guid: 2eab83b0a9063a347a46b752c8e9d64a, type: 3}
       propertyPath: m_Name
       value: Enemy
