@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerProjectile
+  - Car
+  - Dagger
+  - Bomb
+  - Ninja
   layers:
   - Default
   - TransparentFX
@@ -38,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3523528573
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

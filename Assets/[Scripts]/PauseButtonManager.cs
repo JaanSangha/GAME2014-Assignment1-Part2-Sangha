@@ -13,7 +13,8 @@ public class PauseButtonManager : MonoBehaviour
     public GameObject ExitButton;
     public GameObject EndButton;
     public GameObject BlurScreen;
-
+    public GameObject GameOverText;
+    public GameObject WinText;
 
     //pause game and show buttons when pressed
     public void OnPauseButtonPressed()
@@ -47,8 +48,24 @@ public class PauseButtonManager : MonoBehaviour
     //Go to end scene (testing)
     public void OnEndButtonPressed()
     {
-        SceneManager.LoadScene("End");
+        SceneManager.LoadScene("Main");
     }
 
+    public void OngameOver()
+    {
+        Time.timeScale = 0;
+        GameOverText.SetActive(true);
+        ExitButton.SetActive(true);
+        EndButton.SetActive(true);
+        BlurScreen.SetActive(true);
+    }
 
+    public void OnGameWon()
+    {
+        Time.timeScale = 0;
+        WinText.SetActive(true);
+        ExitButton.SetActive(true);
+        EndButton.SetActive(true);
+        BlurScreen.SetActive(true);
+    }
 }
